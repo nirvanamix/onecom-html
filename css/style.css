@@ -7155,6 +7155,9 @@ ul.main-nav > li.has-ul {
   z-index: 4;
 }
 @media (min-width: 768px) {
+  ul.main-nav > li.has-ul:hover {
+    z-index: 6;
+  }
   ul.main-nav > li.has-ul:hover:before {
     opacity: 1;
   }

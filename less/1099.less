@@ -92,9 +92,38 @@ footer{
 		font-size: 0.9rem;
 	}
 }
-
-
-
+/*-----------------------------------------*/
+.goods-items{
+	position: relative;
+	& > .item{
+		&:first-child{
+			position: absolute;
+			z-index: 2;
+			left: -100%;
+			transition: left 0.3s;
+			top: -3rem;
+			&.active{
+				left: 0;
+				box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.31);
+				border-radius: 1.2rem;
+			}
+		}
+		&:nth-child(2){
+			width: 100%;
+		}
+	}
+}
+.items-goods{
+	&.n-5{
+		.item{
+			width: 19.4%;
+			margin-right: 0.7%;
+			&:nth-child(5n){
+				margin-right: 0;
+			}
+		}
+	}
+}
 
 
 

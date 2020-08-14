@@ -128,13 +128,53 @@ info_windows.fun();
 	}
 	mobile_form.fun();
 
+	const checked = {
+		fun: () => {
+			const checked = (item) => {
+				item.each(function(index, el) {
+					if($(this).find('input').prop('checked') == true) $(this).addClass('active');
+						else $(this).removeClass('active');
+				});
+			}
+			checked($('label.checkbox'));
+			$('label.checkbox').click(function(event) {
+				checked($('label.checkbox'));
+			});
+		}
+	}
+	checked.fun();
 
 
+	const acardion = {
+		fun: () => {
+			$('.acardion > .item.active').each(function(index, el) {
+				$(this).find('.bottom').slideDown(0);
+				$(this).find('.top').addClass('active');
+			});
+			$('.acardion .top').click(function(event) {
+				$(this).toggleClass('active');
+				$(this).parent('.item').find('.bottom').slideToggle(200);
+			});
+		}
+	}
+	acardion.fun();
 
 
-
-
-
+	const open_filter = {
+		fun: () => {
+			$('.open-fillter').click(function(event) {
+				event.preventDefault();
+				$('.goods-items > .item:first()').toggleClass('active');
+			});
+			jQuery(document).click( function(event){
+				if(jQuery(event.target).closest(".open-fillter, .filter-items").length ) 
+				return;
+					$('.goods-items > .item:first()').removeClass('active');
+				event.stopPropagation();
+			});
+		}
+	}
+	open_filter.fun();
 
 
 

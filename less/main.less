@@ -17,6 +17,11 @@ body{
 .container-fluid{
 	max-width: 141rem;
 }
+h1, .h1{
+	font-size: 3.6em;
+	line-height: 1.3em;
+	font-weight: 700;
+}
 h2, .h2{
 	font-size: 2.4em;
 	font-weight: 700;
@@ -1414,6 +1419,19 @@ label{
 			background-size: contain;
 		}
 	}
+	&.label-radio{
+		&:before{
+			border: 1px solid #E0E0E0;
+			border-radius: 50%;
+		}
+		&.active{
+			&:before{
+				border-color: #E0E0E0;
+				background: url(../img/point.svg) 50% no-repeat;
+				background-size: 0.5rem auto;
+			}
+		}
+	}
 }
 .bread-cover{
 	display: flex;
@@ -1890,11 +1908,6 @@ label{
 }
 .catalog-section{
 	padding: 1.3rem 0 4rem;
-	h1, .h1{
-		font-size: 3.6em;
-		line-height: 1.3em;
-		font-weight: 700;
-	}
 	h4, .h4{
 		font-size: 1.4em;
 		font-weight: 700;
@@ -2202,8 +2215,320 @@ ul.ul-lists-goods{
 		margin-bottom: 0;
 	}
 }
+.section-basket{
+	padding: 4rem 0 4rem;
+	h1, .h1{
+		margin-bottom: 1.9rem;
+	}
+}
+.basket-items{
+	display: flex;
+	justify-content: space-between;
+	& > .item{
+		&:first-child{
+			width: 68.5%;
+		}
+		&:nth-child(2){
+			width: 28.8%;
+		}
+	}
 
-
+}
+.lists-basket{
+	.item{
+		display: flex;
+		justify-content: space-between;
+		background: #FFFFFF;
+		border: 1px solid #F2F2F2;
+		border-radius: 1.2rem;
+		padding: 1rem;
+		display: flex;
+		align-items: center;
+		padding: 1.8rem 1.4rem;
+		position: relative;
+		margin-bottom: 1.7rem;
+		transition: box-shadow 0.3s;
+		&:hover{
+			box-shadow: 0px 0px 16px rgba(128, 73, 243, 0.18);
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	.colse-wr{
+		position: absolute;
+		top: 1.2rem;
+		right: 1.4rem;
+		.colse{
+			background: none;
+			width: auto;
+			height: auto;
+			display: flex;
+			align-items: center;
+			&:hover{
+				span{
+					&:before, &:after{
+						background: @color-read;
+					}
+				}
+			}
+			span{
+				width: 1rem;
+				height: 1rem;
+				display: block;
+				margin-left: 0.4rem;
+				position: relative;
+				&:before, &:after{
+					content: '';
+					width: 100%;
+					height: 0.2rem;
+					background: #333333;
+					position: absolute;
+					top: calc(50% - 0.1rem);
+					left: 0;
+					transition: background 0.3s;
+				}
+				&:before{
+					transform: rotate(45deg);
+				}
+				&:after{
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+	.img{
+		width: 5.3%;
+		img{
+			width: 100%;
+		}
+	}
+	.description{
+		width: 26%;
+	}
+	.acticule{
+		font-size: 1.1em;
+		color: #828282;
+		font-weight: 400;
+		margin-bottom: 1.3rem;
+		b{
+			color: #000;
+			font-weight: inherit;
+		}
+	}
+	.catecories{
+		color: #333333;
+		font-size: 1.4em;
+		font-weight: 300;
+		margin-bottom: 1rem;
+	}
+	.name{
+		font-size: 1.3em;
+		line-height: 1.15em;
+		font-weight: 700;
+	}
+	.count-wr{
+		width: 25.5%;
+		.count{
+			font-size: 1.1em;
+			color: @color-read;
+			margin-bottom: 2rem;
+		}
+	}
+	.label-radio{
+		font-size: 1.2em;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		mark{
+			font-weight: 900;
+		}
+	}
+	.select-pay{
+		width: 17.4%;
+	}
+}
+.conunt-input{
+	display: flex;
+	align-items: center;
+	input{
+		width: 3rem;
+		text-align: center;
+		font-size: 1.3em;
+		font-family: @font-roboto;
+		font-weight: 700;
+		text-align: right;
+		border: none;
+		margin-right: 0.2rem;
+	}
+	label{
+		display: flex;
+		text-transform: uppercase;
+		align-items: center;
+		margin: 0 2.2rem 0 0.6rem;
+	}
+	button{
+		width: 3.2rem;
+		height: 5rem;
+		border-radius: 1.2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		&:hover{
+			span{
+				&:before, &:after{
+					background: #000;
+				}
+			}
+		}
+		&:active{
+			span{
+				&:after, &:before{
+					background: @color-read;
+					transition: all 0s;
+				}
+			}
+		}
+		span{
+			display: block;
+			width: 100%;
+			height: 64%;
+			border: 1px solid #E0E0E0;
+			border-radius: 1.2rem;
+			background: #fff;
+			position: relative;
+			&:before, &:after{
+				content: '';
+				width: 60%;
+				height: 0.4rem;
+				background: #C4C4C4;
+				display: block;
+				position: absolute;
+				top: calc(50% - 0.2rem);
+				left: 20%;
+				transition: background 0.3s;
+			}
+		}
+		mark{
+			width: 100%;
+			display: block;
+			width: 100%;
+			height: 36%;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			font-size: 0.9em;
+		}
+	}
+	.minus{
+		button{
+			background: @color-read;
+			span{
+				&:after{
+					content: none;
+				}
+			}
+		}
+	}
+	.plus{
+		button{
+			background: @color-violet;
+			span{
+				&:after{
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+}
+.basket-cart{
+	background: #FFFFFF;
+	box-shadow: 0px 0px 16px rgba(128, 73, 243, 0.18);
+	border-radius: 1.2rem;
+	padding: 1.9rem 2rem;
+	.sale{
+		text-align: right;
+		margin-bottom: 0.7rem;
+		align-items: flex-end;
+		span{
+			font-size: 1.8em;
+			color: #8E8E8E;
+			display: inline-block;
+			text-decoration: line-through;
+		}
+		mark{
+			font-size: 2.4em;
+			color: @color-read;
+			font-weight: 700;
+			display: inline-block;
+			margin-left: 0.7rem;
+		}
+	}
+	.total{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-weight: 700;
+		font-size: 2.4em;
+		margin-bottom: 3.7rem;
+		span{
+			font-size: 1.5em;
+		}
+	}
+	ul{
+		font-size: 1.4em;
+		color: #333;
+		margin-bottom: 4.2rem;
+		li{
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 1.2rem;
+		}
+		span{
+			display: block;
+			line-height: 1.16em;
+			&:last-child{
+				text-align: right;
+				max-width: 18rem;
+			}
+		}
+	}
+	.title{
+		font-size: 2.4em;
+		display: flex;
+		justify-content: space-between;
+		font-weight: 700;
+		margin-bottom: 2.5rem;
+	}
+	.link-delirion{
+		margin-bottom: 2rem;
+		text-align: right;
+		font-size: 1.4em;
+		a{
+			color: @color-violet;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+	.link-page{
+		a{
+			width: 100%;
+			font-size: 1.8em;
+			text-align: center;
+			justify-content: center;
+			padding: 0.9em 1em;
+		}
+	}
+}
 
 
 

@@ -178,6 +178,132 @@ info_windows.fun();
 
 
 
+	const count_input = {
+		fun: function(){
+			jQuery('.conunt-input').each(function(index, el) {
+				jQuery(this).prepend(`
+					<div class="minus">
+						<button>
+							<span></span>
+							<mark>мин</mark>
+						</button>
+					</div>`);
+				jQuery(this).append(`
+					<div class="plus">
+						<button>
+							<span></span>
+							<mark>макс</mark>
+						</button>
+					</div>
+				`);
+
+
+
+
+				/*add data-add*/
+				var data_add = jQuery(this).find('input').attr('data-add');
+				if (typeof data_add !== typeof undefined && data_add !== false) {
+					var th_val = jQuery(this).find('input').attr('value');
+					jQuery(this).find('input').val(th_val + data_add);
+				}
+			});
+			jQuery('.conunt-input div button').click(function(event) {
+				// getting value from input
+				var val_input = jQuery(this).parents('.conunt-input').find('input').val();
+				var val_input = parseInt(val_input);
+				// check the number
+				val_input =+ val_input;
+				var audit_input = jQuery.isNumeric(val_input);
+				// if input value not number
+				if(audit_input == false){
+					var val_input = 0;
+				}
+				// if click on plus
+				var has_plus = jQuery(this).parent('div').hasClass('plus');
+				if(has_plus == true){
+					val_input =+ val_input + 1;
+				}
+				// if click on minus
+				var has_minus = jQuery(this).parent('div').hasClass('minus');
+				if(has_minus == true){
+					var value_p = jQuery(this).parents('.conunt-input').find('input').val();
+					value_p = parseInt(value_p);
+					value_p  =+ value_p;
+					if(value_p >= 2){
+						val_input =+ val_input - 1;
+					}
+				}
+				// output in input
+				/* add content for data-add*/
+				jQuery(this).parents('.conunt-input').find('input').val(val_input);
+				jQuery(this).parents('.conunt-input').find('input').attr('value', val_input);
+				/* add content for data-add*/
+				var th_val = jQuery(this).parents('.conunt-input').find('input').val();
+				th_val = parseInt(th_val);
+				var data_add = jQuery(this).parents('.conunt-input').find('input').attr('data-add');
+				if (typeof data_add !== typeof undefined && data_add !== false) {
+					var th_val = jQuery(this).parents('.conunt-input').find('input').val(th_val + data_add);
+				}
+				/*data-min and data-max*/
+				var has_min = jQuery(this).parents('.conunt-input').find('input').attr('data-min');
+				if(has_min != undefined){
+					has_min =+ has_min;
+					if(val_input < has_min) jQuery(this).parents('.conunt-input').find('input').val(has_min)
+				}
+				
+				var has_max = jQuery(this).parents('.conunt-input').find('input').attr('data-max');
+				if(has_max != undefined){
+					has_max =+ has_max;
+					if(val_input > has_max) jQuery(this).parents('.conunt-input').find('input').val(has_max)
+				}
+			});
+			jQuery('.conunt-input input').focus(function(event) {
+				jQuery(this).select();
+			});
+			jQuery('.conunt-input input').focusout(function(event) {
+				var val_input = jQuery(this).val();
+				val_input = parseInt(val_input);
+				val_input =+ val_input;
+				var val_string = jQuery.isNumeric(val_input);
+				if(val_string == false){
+					jQuery(this).val(1);
+					jQuery(this).attr('value', '1');
+				}
+				if(val_input < 1){
+					jQuery(this).val(1);
+					jQuery(this).attr('value', '1');
+				}
+				/* add content for data-add*/
+				var th_val = jQuery(this).val();
+				th_val = parseInt(th_val);
+				var data_add = jQuery(this).attr('data-add');
+				if (typeof data_add !== typeof undefined && data_add !== false) {
+					jQuery(this).val(th_val + data_add);
+				}
+				/*data-min and data-max*/
+				if($(this).attr('data-min') != undefined){
+					if(parseInt(val_input) < parseInt($(this).attr('data-min'))){
+						jQuery(this).val($(this).attr('data-min'));
+					}
+				}
+				if($(this).attr('data-max') != undefined){
+					if(parseInt(val_input) > parseInt($(this).attr('data-max'))){
+						jQuery(this).val($(this).attr('data-max'));
+					}
+				}
+			});
+			// add nav keydown
+			$(".conunt-input input" ).not('input[type=number]').on("keydown", function( event ) {
+				if(event.which == 38) $(this).parents('.conunt-input').find('.plus button').trigger('click');
+				if(event.which == 40) $(this).parents('.conunt-input').find('.minus button').trigger('click');
+			});
+		}
+	}
+	count_input.fun();
+
+
+
+
 
 
 

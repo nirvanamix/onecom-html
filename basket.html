@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<title>main</title>
+	<!-- style -->
+	<link href="css/style.min.css" rel="stylesheet">
+	<!-- gogole fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<header>
+		<div class="top-header">
+			<div class="container-fluid">
+				<nav>
+					<a href="#">
+						О нас
+					</a>
+					<a href="#">
+						Как купить
+					</a>
+					<a href="#">
+						Доставка
+					</a>
+					<a href="#">
+						Гарантии
+					</a>
+					<a href="#">
+						Вакансии
+					</a>
+					<a href="#">
+						Контакты
+					</a>
+				</nav>
+				<div class="enter-link">
+					<a href="#">
+						Вход
+					</a>
+					<span>|</span>
+					<a href="#">
+						Регистрация
+					</a>
+				</div>
+				<div class="links-right">
+					<a href="#">
+						В закладки
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid main-heder">
+			<div class="logos-block">
+				<div class="location">
+					<svg class="marker"><use xlink:href="img/symbol/icons_sprite.svg#marker" /></svg>
+					Ваше место положение:
+					<div class="place">
+						<div class="top">
+							Москва
+						</div>
+						<div class="bottom">
+							<div class="list">
+								<a href="#">
+									Реутов
+								</a>
+							</div>
+							<div class="list">
+								<a href="#">
+									Архангельск
+								</a>
+							</div>
+							<div class="list">
+								<a href="#">
+									Указать на карте
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="logo">
+					<a href="#">
+						<img src="img/logo.png" alt="">
+					</a>
+				</div>
+				<div class="link-catalog">
+					<a href="#" class="open-catalog">
+						КАТАЛОГ
+						<svg class="burger"><use xlink:href="img/symbol/icons_sprite.svg#burger" /></svg>
+					</a>
+					<a href="#">
+						Скачать прайс лист
+						<svg class="download"><use xlink:href="img/symbol/icons_sprite.svg#download" /></svg>
+					</a>
+				</div>
+			</div>
+			<div class="form-header">
+				<!-- mobile html -->
+				<div class="mobile-search">
+					<svg><use xlink:href="img/symbol/icons_sprite.svg#search" /></svg>
+				</div>
+				<!-- mobile html -->
+				<div class="links-list">
+					<a href="#">
+						Конфигуратор ПК
+					</a>
+					<a href="#">
+						Подбор готовой конфигурации
+					</a>
+				</div>
+				<form action="#" class="form-autocomplete">
+					<div class="wr-form">
+						<input type="text" class="autocomplete" placeholder="Поиск">
+						<label class="submit">
+							<svg><use xlink:href="img/symbol/icons_sprite.svg#search" /></svg>
+							<input type="text">
+						</label>
+					</div>
+					<p>
+						Тут Вы можете найти нужный вам товар по характеристикам или по артикулам
+					</p>
+				</form>
+				<div class="links-list-two">
+					<div class="left">
+						<a href="#">
+							Top 100 
+						</a>
+						<a href="#">
+							Подборкадля вас
+						</a>
+					</div>
+					<a href="#">
+						Товары со скидкой
+					</a>
+				</div>
+			</div>
+			<div class="right-header">
+				<div class="text">
+					<div class="graphic">
+						<svg class="clock"><use xlink:href="img/symbol/icons_sprite.svg#clock" /></svg>
+						Время работы <b> Пн. - Пт. с 10-30 до 19-00</b>
+					</div>
+					<div class="phone-block">
+						<a href="#">
+							<svg class="phone"><use xlink:href="img/symbol/icons_sprite.svg#phone" /></svg>
+							+7 (495) 565- 34-90
+						</a>
+					</div>
+					<div class="call-back">
+						<a href="#">
+							Заказать обратный звонок
+						</a>
+					</div>
+					<div class="message">
+						<a href="#">
+							Ваши уведомления
+							<span>
+								8
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="basket-block">
+					<a href="#" class="basket">
+						<svg class="basket"><use xlink:href="img/symbol/icons_sprite.svg#basket" /></svg>
+						<span>
+							24
+						</span>
+					</a>
+					<div class="price">
+						15 65 55 ₽
+					</div>
+					<div class="link-bsket">
+						<a href="#">
+							<svg class="heart"><use xlink:href="img/symbol/icons_sprite.svg#heart" /></svg>
+							<span>
+								55
+							</span>
+						</a>
+						<a href="#">
+							<svg class="compare"><use xlink:href="img/symbol/icons_sprite.svg#compare" /></svg>
+							<span>
+								54
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- mobile html -->
+		<div class="mobile-menu">
+			<div></div><div></div><div></div>
+		</div>
+		<!-- mobile html -->
+	</header>
+	<div class="navigation">
+		<div class="container-fluid">
+			<div class="mobile-title">
+				Меню
+			</div>
+			<ul class="main-nav">
+				<li>
+					<a href="#">
+						Компьютеры
+					</a>
+					<ul data-back="Вернутся назад">
+						<li>
+							<a href="#">
+								Моноблоки
+								<span>
+									56 шт.
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Стационарные ПК
+								<span>
+									56 шт.
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Ноутбуки
+								<span>
+									56 шт.
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Сервера
+								<span>
+									Предзаказ
+								</span>
+							</a>
+							<ul data-back="Вернутся назад">
+								<li>
+									<a href="#">
+										Моноблоки
+										<span>
+											56 шт.
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Стационарные ПК
+										<span>
+											56 шт.
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Ноутбуки
+										<span>
+											56 шт.
+										</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								Для школы
+								<span>
+									56 шт.
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Профессионалам
+								<span>
+									56 шт.
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Бюджетные
+								<span>
+									56 шт.
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Игровые
+								<span>
+									56 шт.
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Топ 100
+								<span>
+									56 шт.
+								</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						Комлектующие для компьютера
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Внешние носители информации
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Графические планшеты
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Мебель компьютерная
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Игровые консоли
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Орг техника для компьютера
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Програмное обеспечинее
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Сетевое оборудование
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Монтажное оборудование
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Apple
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<b>1000 мелочей</b>
+					</a>
+				</li>
+			</ul>
+			<div class="fasten">
+				<svg><use xlink:href="img/symbol/icons_sprite.svg#fasten" /></svg>
+			</div>
+		</div>
+		<div class="colse"></div>
+	</div>
+
+<section class="section-basket">
+	<div class="container-fluid">
+		<div class="bread-cover">
+			Сейчас вы на:
+			<a href="#">
+				Главная
+			</a>
+			<span>
+				Каталог
+			</span>
+		</div>
+		<h1>
+			Корзина
+		</h1>
+		<div class="basket-items">
+			<div class="item">
+				<div class="lists-basket">
+					<div class="item">
+						<div class="img">
+							<img src="img/simple/4.jpg" alt="">
+						</div>
+						<div class="description">
+							<div class="acticule">
+								Артикул: <b>202646</b>
+							</div>
+							<div class="catecories">
+								Офисное кресло
+							</div>
+							<div class="name">
+								HDD 1 Tb SATA 6Gb/s Toshiba HDWU110UZSVA 3.5"
+							</div>
+						</div>
+						<div class="count-wr">
+							<div class="count">
+								В наличии 30 шт.
+							</div>
+							<div class="conunt-input">
+								<label>
+									<input type="text" value="1" data-min="1" data-max="30"> шт.
+								</label>
+							</div>
+						</div>
+						<div class="select-pay">
+							<label class="label-radio checkbox">
+								<input type="radio" name="class_pay">
+								<span>
+									Нал: 
+								</span>
+								<mark>
+									1 350 ₽
+								</mark>
+							</label>
+							<label class="label-radio checkbox">
+								<input type="radio" name="class_pay">
+								<span>
+									Безнал: 
+								</span>
+								<mark>
+									1 600 ₽
+								</mark>
+							</label>
+						</div>
+						<div class="colse-wr">
+							<a href="#" class="colse">
+								Удалить
+								<span></span>
+							</a>
+						</div>
+					</div>
+					<div class="item">
+						<div class="img">
+							<img src="img/simple/4.jpg" alt="">
+						</div>
+						<div class="description">
+							<div class="acticule">
+								Артикул: <b>202646</b>
+							</div>
+							<div class="catecories">
+								Офисное кресло
+							</div>
+							<div class="name">
+								HDD 1 Tb SATA 6Gb/s Toshiba HDWU110UZSVA 3.5"
+							</div>
+						</div>
+						<div class="count-wr">
+							<div class="count">
+								В наличии 30 шт.
+							</div>
+							<div class="conunt-input">
+								<label>
+									<input type="text" value="1" data-min="1" data-max="30"> шт.
+								</label>
+							</div>
+						</div>
+						<div class="select-pay">
+							<label class="label-radio checkbox">
+								<input type="radio" name="class_pay">
+								<span>
+									Нал: 
+								</span>
+								<mark>
+									1 350 ₽
+								</mark>
+							</label>
+							<label class="label-radio checkbox">
+								<input type="radio" name="class_pay">
+								<span>
+									Безнал: 
+								</span>
+								<mark>
+									1 600 ₽
+								</mark>
+							</label>
+						</div>
+						<div class="colse-wr">
+							<a href="#" class="colse">
+								Удалить
+								<span></span>
+							</a>
+						</div>
+					</div>
+					<div class="item">
+						<div class="img">
+							<img src="img/simple/4.jpg" alt="">
+						</div>
+						<div class="description">
+							<div class="acticule">
+								Артикул: <b>202646</b>
+							</div>
+							<div class="catecories">
+								Офисное кресло
+							</div>
+							<div class="name">
+								HDD 1 Tb SATA 6Gb/s Toshiba HDWU110UZSVA 3.5"
+							</div>
+						</div>
+						<div class="count-wr">
+							<div class="count">
+								В наличии 30 шт.
+							</div>
+							<div class="conunt-input">
+								<label>
+									<input type="text" value="1" data-min="1" data-max="30"> шт.
+								</label>
+							</div>
+						</div>
+						<div class="select-pay">
+							<label class="label-radio checkbox">
+								<input type="radio" name="class_pay">
+								<span>
+									Нал: 
+								</span>
+								<mark>
+									1 350 ₽
+								</mark>
+							</label>
+							<label class="label-radio checkbox">
+								<input type="radio" name="class_pay">
+								<span>
+									Безнал: 
+								</span>
+								<mark>
+									1 600 ₽
+								</mark>
+							</label>
+						</div>
+						<div class="colse-wr">
+							<a href="#" class="colse">
+								Удалить
+								<span></span>
+							</a>
+						</div>
+					</div>
+					<div class="item">
+						<div class="img">
+							<img src="img/simple/4.jpg" alt="">
+						</div>
+						<div class="description">
+							<div class="acticule">
+								Артикул: <b>202646</b>
+							</div>
+							<div class="catecories">
+								Офисное кресло
+							</div>
+							<div class="name">
+								HDD 1 Tb SATA 6Gb/s Toshiba HDWU110UZSVA 3.5"
+							</div>
+						</div>
+						<div class="count-wr">
+							<div class="count">
+								В наличии 30 шт.
+							</div>
+							<div class="conunt-input">
+								<label>
+									<input type="text" value="1" data-min="1" data-max="30"> шт.
+								</label>
+							</div>
+						</div>
+						<div class="select-pay">
+							<label class="label-radio checkbox">
+								<input type="radio" name="class_pay">
+								<span>
+									Нал: 
+								</span>
+								<mark>
+									1 350 ₽
+								</mark>
+							</label>
+							<label class="label-radio checkbox">
+								<input type="radio" name="class_pay">
+								<span>
+									Безнал: 
+								</span>
+								<mark>
+									1 600 ₽
+								</mark>
+							</label>
+						</div>
+						<div class="colse-wr">
+							<a href="#" class="colse">
+								Удалить
+								<span></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item basket-cart">
+				<div class="sale">
+					<span>
+						1 558 600 ₽
+					</span>
+					<mark>
+						-30%
+					</mark>
+				</div>
+				<div class="total">
+					Итого:
+					<span>
+						1 558 556 ₽ 
+					</span>
+				</div>
+				<ul>
+					<li>
+						<span>
+							Всего товаров
+						</span>
+						<span>
+							4 шт.
+						</span>
+					</li>
+					<li>
+						<span>
+							Оплата
+						</span>
+						<span>
+							Безналичные
+						</span>
+					</li>
+				</ul>
+				<div class="title">
+					<span>
+						Доставка
+					</span>
+					<span>
+						500 ₽ 
+					</span>
+				</div>
+				<ul>
+					<li>
+						<span>
+							Дата доставки:
+						</span>
+						<span>
+							12.08.2019
+						</span>
+					</li>
+					<li>
+						<span>
+							До двери:
+						</span>
+						<span>
+							<mark>Курьером</mark>
+						</span>
+					</li>
+					<li>
+						<span>
+							По адресу:
+						</span>
+						<span>
+							Москва 3-я Парковая ул., д.24, к.5 
+						</span>
+					</li>
+				</ul>
+				<div class="link-delirion">
+					<a href="#">
+						Условия доставки
+					</a>
+				</div>
+				<div class="link-page violet-bg">
+					<a href="#">
+						ОФОРМИТЬ
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+	<footer>
+		<div class="container-fluid">
+			<div class="item">
+				<div class="flex">
+					<div class="item">
+						<h5>
+							Конфигуратор ПК
+						</h5>
+						<p>
+							Из 29 459 комплектующих
+						</p>
+					</div>
+					<div class="item">
+						<h5>
+							Подбор готовой конфигурации
+						</h5>
+						<p>
+							Для вас подобранно 2 338 вариантов ПК
+						</p>
+					</div>
+				</div>
+				<p>
+					<b>
+						© Интернет магазин компьютерной техники «Onecom» 2007&nbsp;—&nbsp;2019 
+					</b>
+				</p>
+				<p>
+					НИКС - Компьютерный Cупермаркет - полный каталог описаний
+				</p>
+			</div>
+			<div class="item">
+				<div class="flex-phone">
+					<div class="item">
+						<div class="link-phone">
+							<a href="#">
+								+7 (495) 565- 34-90
+							</a>
+							<span>
+								Время работы Пн. - Пт. с 10-30 до 20-00
+							</span>
+						</div>
+					</div>
+					<div class="item">
+						<h5>
+							Обратный звонок
+						</h5>
+						<a href="#">
+							 Написать нам
+						</a>
+					</div>
+				</div>
+				<div class="social">
+					<a href="#">
+						<svg class="vk"><use xlink:href="img/symbol/icons_sprite.svg#vk" /></svg>
+					</a>
+					<a href="#">
+						<svg class="facebook"><use xlink:href="img/symbol/icons_sprite.svg#facebook" /></svg>
+					</a>
+					<a href="#">
+						<svg class="ok"><use xlink:href="img/symbol/icons_sprite.svg#ok" /></svg>
+					</a>
+					<a href="#">
+						<svg class="mail-ru"><use xlink:href="img/symbol/icons_sprite.svg#mail-ru" /></svg>
+					</a>
+					<a href="#">
+						<svg class="google-plus"><use xlink:href="img/symbol/icons_sprite.svg#google-plus" /></svg>
+					</a>
+					<a href="#">
+						<svg class="instagram"><use xlink:href="img/symbol/icons_sprite.svg#instagram" /></svg>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="graphic">
+					<h5>
+						Проверить статус заказа
+					</h5>
+					<p>
+						Время доставки Пн. - Пт. с 10-30 до 20-00
+					</p>
+				</div>
+				<div class="link-page-two">
+					<a href="#">
+						<svg class="price"><use xlink:href="img/symbol/icons_sprite.svg#price" /></svg>
+						Скачать прайс лист
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- script -->
+	<script src="js/jquery/jquery-3.4.1.min.js"></script>
+	<!-- functions -->
+	<script src="js/function.js"></script>
+	<!-- owl carousel -->
+	<script src="js/plugins/owl.carousel.js"></script>
+	<script src="js/plugins/owl.carousel-include.js"></script>
+	<!-- jqueryUi -->
+	<script src="js/plugins/jqueryUi.js"></script>
+	<script src="js/plugins/jqueryUi-include.js"></script>
+	<!-- script -->
+</body>
+</html>

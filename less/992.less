@@ -12,7 +12,7 @@ header{
 		.container-fluid{
 			& > *{
 				&:first-child{
-					width: 41.2%;
+					width: 45%;
 				}
 				&:nth-child(3){
 					width: 25%;
@@ -261,9 +261,84 @@ footer{
 		max-width: 62.8rem;
 	}
 }
-
-
-
+.basket-items{
+	flex-direction: wrap;
+	flex-direction: column;
+	& > .item{
+		&:first-child{
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+		&:nth-child(2){
+			display: block;
+			width: 100%;
+		}
+	}
+}
+.basket-items > .item.basket-cart{
+	padding-right: 24rem;
+	position: relative;
+	.sale{
+		text-align: left;
+		mark{
+			font-size: 1.8em;
+		}
+	}
+	.total{
+		font-size: 2em;
+		margin-bottom: 1.7rem;
+		margin-bottom: 0.6rem;
+		justify-content: flex-start;
+		span{
+			font-size: 1em;
+			margin-left: 0.5rem;
+		}
+	}
+	.title{
+		font-size: 1.6em;
+		margin-bottom: 2rem;
+		justify-content: flex-start;
+		margin-bottom: 0.5rem;
+		span{
+			&:first-child{
+				margin-right: 0.6rem;
+			}
+		}
+	}
+	ul{
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 1rem;
+		color: #8B8B8B;
+		li{
+			white-space: nowrap;
+			display: inline-block;
+			margin-right: 3rem;
+			span{
+				display: inline-block;
+				&:last-child{
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	.link-delirion{
+		text-align: left;
+		margin-bottom: 0;
+	}
+	.link-page{
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		width: 20rem;
+	}
+}
+.fillters-block{
+	padding-left: 0.8rem;
+	.link-page{
+		display: block;
+	}
+}
 
 
 

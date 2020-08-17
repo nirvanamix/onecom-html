@@ -410,7 +410,7 @@
 						</div>
 						<div class="select-pay">
 							<label class="label-radio checkbox">
-								<input type="radio" name="class_pay">
+								<input type="radio" name="class_pay" checked>
 								<span>
 									Нал: 
 								</span>
@@ -429,7 +429,7 @@
 							</label>
 						</div>
 						<div class="colse-wr">
-							<a href="#" class="colse">
+							<a href="#" class="colse" data-modal='dealte'>
 								Удалить
 								<span></span>
 							</a>
@@ -462,7 +462,7 @@
 						</div>
 						<div class="select-pay">
 							<label class="label-radio checkbox">
-								<input type="radio" name="class_pay">
+								<input type="radio" name="class_pay-2" checked>
 								<span>
 									Нал: 
 								</span>
@@ -471,7 +471,7 @@
 								</mark>
 							</label>
 							<label class="label-radio checkbox">
-								<input type="radio" name="class_pay">
+								<input type="radio" name="class_pay-2">
 								<span>
 									Безнал: 
 								</span>
@@ -481,7 +481,7 @@
 							</label>
 						</div>
 						<div class="colse-wr">
-							<a href="#" class="colse">
+							<a href="#" class="colse" data-modal='dealte'>
 								Удалить
 								<span></span>
 							</a>
@@ -514,7 +514,7 @@
 						</div>
 						<div class="select-pay">
 							<label class="label-radio checkbox">
-								<input type="radio" name="class_pay">
+								<input type="radio" name="class_pay-3" checked>
 								<span>
 									Нал: 
 								</span>
@@ -523,7 +523,7 @@
 								</mark>
 							</label>
 							<label class="label-radio checkbox">
-								<input type="radio" name="class_pay">
+								<input type="radio" name="class_pay-3">
 								<span>
 									Безнал: 
 								</span>
@@ -533,7 +533,7 @@
 							</label>
 						</div>
 						<div class="colse-wr">
-							<a href="#" class="colse">
+							<a href="#" class="colse" data-modal='dealte'>
 								Удалить
 								<span></span>
 							</a>
@@ -566,7 +566,7 @@
 						</div>
 						<div class="select-pay">
 							<label class="label-radio checkbox">
-								<input type="radio" name="class_pay">
+								<input type="radio" name="class_pay-4" checked>
 								<span>
 									Нал: 
 								</span>
@@ -575,7 +575,7 @@
 								</mark>
 							</label>
 							<label class="label-radio checkbox">
-								<input type="radio" name="class_pay">
+								<input type="radio" name="class_pay-4">
 								<span>
 									Безнал: 
 								</span>
@@ -585,7 +585,7 @@
 							</label>
 						</div>
 						<div class="colse-wr">
-							<a href="#" class="colse">
+							<a href="#" class="colse" data-modal='dealte'>
 								Удалить
 								<span></span>
 							</a>
@@ -772,6 +772,26 @@
 			</div>
 		</div>
 	</footer>
+	<!-- modal window -->
+	<div class="modal-window" data-modal='dealte'>
+		<div class="window">
+			<div class="title">
+				Удалить этот товар из корзины?
+			</div>
+			<div class="link-chose">
+				<div class="link-page silver">
+					<a href="#">
+						Удалить
+					</a>
+				</div>
+				<div class="link-page violet-bg">
+					<a href="#" class="close-modal">
+						Отмена
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- script -->
 	<script src="js/jquery/jquery-3.4.1.min.js"></script>
 	<!-- functions -->

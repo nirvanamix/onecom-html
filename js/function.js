@@ -1,49 +1,4 @@
 jQuery(document).ready(function($) {
-/******* info for widnow *******/
-var info_windows = {
-	fun: function(){
-		$('body').append('<div class="info_block"><div class="w"></div><div class="h"></div><div class="s"></div></div>');
-		let function_info = () =>{
-			$('.info_block .w').text(`w: ${$(window).outerWidth()}`);
-			$('.info_block .h').text(`h: ${$(window).outerHeight()}`);
-				let m = $(window).outerWidth()
-					n = $(window).outerHeight()
-					M = m, N = n;
-				for (let i = 2; i <= m; i++) {
-					if (m % i === 0 &&  n % i === 0)
-						M = m / i, N = n / i;
-				}
-			$('.info_block .s').text(`s: ${M}:${N}`);
-		}
-		function_info();
-		$(window).resize(()=>{
-			function_info();
-		})
-		// style
-		$('.info_block').css({
-			position: 'fixed',
-			top: '100px',
-			right: 0,
-			color: '#fff',
-			textShadow: '0px 0px 1px #000',
-			background: 'rgba(101,101,101, 0.8)',
-			zIndex: '999999',
-			padding: '2px 2px 2px 2px',
-			fontSize: '10px',
-			lineHeight: '12px',
-			textAlign: 'right',
-			userSelect: 'none',
-			fontFamily: 'Arial',
-			fontWeight: '400'
-		});
-	}
-}
-info_windows.fun();
-/******* info for widnow *******/
-
-
-
-
 	const main_menu = {
 		fun: () => {
 			$('ul.main-nav li').each(function(index, el) {
@@ -177,7 +132,6 @@ info_windows.fun();
 	open_filter.fun();
 
 
-
 	const count_input = {
 		fun: function(){
 			jQuery('.conunt-input').each(function(index, el) {
@@ -196,10 +150,6 @@ info_windows.fun();
 						</button>
 					</div>
 				`);
-
-
-
-
 				/*add data-add*/
 				var data_add = jQuery(this).find('input').attr('data-add');
 				if (typeof data_add !== typeof undefined && data_add !== false) {
@@ -302,11 +252,26 @@ info_windows.fun();
 	count_input.fun();
 
 
-
-
-
-
-
-
-
+	const moda_window = {
+		fun: () => {
+			$('body').on('click', 'a[data-modal]', function(event){
+				event.preventDefault();
+				$('.modal-window').fadeOut(400).removeClass('active');
+				var data_modal = $(this).attr('data-modal');
+				$('.modal-window[data-modal="' + data_modal +'"]').fadeIn(400).addClass('active');
+			});
+			$('body').on('click', '.close-modal', function(event){
+				event.preventDefault();
+				$('.modal-window').fadeOut(400);
+				$('.modal-window').removeClass('active');
+			});
+			jQuery(".modal-window").click( function(event){
+				if(jQuery(event.target).closest(".window").length ) 
+				return;
+					$('.modal-window').fadeOut(400).removeClass('active');
+				event.stopPropagation();
+			});
+		}
+	}
+	moda_window.fun();
 });

@@ -16,7 +16,13 @@ jQuery(document).ready(function($) {
 
 			$('.fasten').click(function(event) {
 				$('.navigation').toggleClass('fixed-block');
+				($('.navigation').hasClass('fixed-block') == true) ? localStorage.setItem("navigation-fix", true) : localStorage.setItem("navigation-fix", false);
 			});
+
+
+			// get lodaSrorage
+			(localStorage.getItem("navigation-fix") == 'true') ? $('.navigation').addClass('fixed-block') : $('.navigation').removeClass('fixed-block')
+
 
 			$('.open-catalog').click(function(event) {
 				event.preventDefault();

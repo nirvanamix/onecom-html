@@ -10104,6 +10104,9 @@ ul.ul-lists-goods span {
     -webkit-box-shadow: none;
     box-shadow: none;
   }
+  ul.main-nav li.has-ul.mobile-active {
+    z-index: 5;
+  }
   ul.main-nav li.has-ul.mobile-active > ul {
     display: block;
     position: fixed;

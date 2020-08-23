@@ -6671,6 +6671,10 @@ svg.price {
 .new-goods .link {
   font-size: 1.4em;
 }
+.new-goods .link a {
+  position: relative;
+  z-index: 5;
+}
 .new-goods .link-goods {
   display: block;
   width: 19.4rem;
@@ -10105,7 +10109,7 @@ ul.ul-lists-goods span {
     box-shadow: none;
   }
   ul.main-nav li.has-ul.mobile-active {
-    z-index: 5;
+    z-index: 6;
   }
   ul.main-nav li.has-ul.mobile-active > ul {
     display: block;

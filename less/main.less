@@ -38,7 +38,7 @@ h5, .h5{
 	margin-bottom: 1rem;
 }
 h6, .h6{
-	font-size: 1.1em;
+	font-size: 1.3em;
 	font-weight: 1.1em;
 	margin-bottom: 2.3rem;
 }
@@ -52,8 +52,8 @@ a{
 b{
 	font-weight: 700;
 }
-.link-page{
-	a{
+.link-page, .submit{
+	a, input{
 		font-size: 1.4em;
 		color: @color-violet;
 		background: #fff;
@@ -67,6 +67,13 @@ b{
 			color: #fff;
 		}
 	}
+	input{
+		width: 100%;
+		height: 4rem;
+		border: none;
+		cursor: pointer;
+		transition: background 0.3s;
+	}
 	svg{
 		&.basket-two{
 			width: 1.6rem;
@@ -75,7 +82,7 @@ b{
 		}
 	}
 	&.read{
-		a{
+		a, input{
 			background: none;
 			border: 1px solid @color-read;
 			color: @color-read;
@@ -86,7 +93,7 @@ b{
 		}
 	}
 	&.silver{
-		a{
+		a, input{
 			background: none;
 			border: 1px solid #8E8E8E;;
 			color:#8E8E8E;;
@@ -97,7 +104,7 @@ b{
 		}
 	}
 	&.violet{
-		a{
+		a, input{
 			background: none;
 			border: 1px solid @color-violet;
 			color: @color-violet;
@@ -108,7 +115,7 @@ b{
 		}
 	}
 	&.violet-bg{
-		a{
+		a, input{
 			background: @color-violet;
 			color: #fff;
 			svg{
@@ -199,7 +206,7 @@ svg{
 	}
 }
 .location{
-	font-size: 1.1em;
+	font-size: 1.3em;
 	font-weight: 300;
 	display: flex;
 	margin-bottom: 0.9rem;
@@ -223,7 +230,7 @@ svg{
 		border-radius: 1.2rem;
 		color: #000000;
 		padding: 1.3rem 1.3rem;
-		font-size: 1.1em;
+		font-size: 1.3em;
 		font-weight: 300;
 		top: calc(100% + 0.5rem);
 		left: -4.4rem;
@@ -584,6 +591,34 @@ svg{
 			}
 		}
 	}
+	&.theme-2{
+		.owl-item > .item{
+			height: auto;
+			&:before{
+				content: none;
+			}
+		}
+		.text{
+			position: relative;
+			color: #000;
+			padding: 0;
+			margin-top: 2rem;
+			top: auto;
+			left: auto;
+			width: auto;
+			height: auto;
+			svg{
+				fill: #000;
+				margin: 0 0.6rem 0 0 !important;
+			}
+		}
+		p{
+			margin-bottom: 1rem;
+		}
+		.price{
+			position: static;
+		}
+	}
 }
 .owl-style-1{
 	.owl-dots{
@@ -682,7 +717,7 @@ svg{
 		}
 	}
 	p{
-		font-size: 1.1em;
+		font-size: 1.3em;
 		margin-bottom: 0;
 	}
 	.link-page{
@@ -731,7 +766,7 @@ svg{
 		}
 	}
 	ul{
-		font-size: 1.1em;
+		font-size: 1.3em;
 		line-height: 1.18em;
 	}
 	.links-config{
@@ -982,7 +1017,7 @@ header{
 			justify-content: space-between;
 			& > * {
 				&:first-child{
-					width: 35%;
+					width: 40%;
 				}
 				&:nth-child(2),
 				&:nth-child(3){
@@ -992,7 +1027,7 @@ header{
 		}
 	}
 	nav{
-		font-size: 1.1em;
+		font-size: 1.3em;
 		display: flex;
 		a, span{
 			display: block;
@@ -1016,7 +1051,7 @@ header{
 	.links-right{
 		display: flex;
 		justify-content: flex-end;
-		font-size: 1.1em;
+		font-size: 1.3em;
 	}
 	.main-heder{
 		color: #fff;
@@ -1064,7 +1099,7 @@ header{
 			}
 			&:last-child{
 				margin-right: 0;
-				font-size: 1.1em;
+				font-size: 1.3em;
 			}
 		}
 		svg{
@@ -1205,7 +1240,7 @@ header{
 .section-main{
 	padding: 1.2rem 0 3.9rem;
 	p{
-		font-size: 1.1em;
+		font-size: 1.3em;
 		line-height: 1.18em;
 	}
 }
@@ -1232,7 +1267,7 @@ footer{
 		}
 	}
 	p{
-		font-size: 1.1em;
+		font-size: 1.3em;
 		line-height: 1.18em;
 		margin-bottom: 1.3rem;
 		&:last-child{
@@ -1292,7 +1327,7 @@ footer{
 	a{
 		display: block;
 		width: 29%;
-		font-size: 1.1em;
+		font-size: 1.3em;
 		margin-bottom: 1.6rem;
 		&:hover{
 			.icon{
@@ -1379,6 +1414,19 @@ footer{
 
 label{
 	display: block;
+	margin-bottom: 2rem;
+	input{
+		width: 100%;
+		height: 4rem;
+		font-size: 1.4rem;
+		border: 1px solid @color-violet;
+		border-radius: 0.5rem;
+		padding: 0 1.5rem;
+	}
+	::placeholder {
+		color: @color-violet;
+		opacity: 1;
+	}
 	&.checkbox{
 		position: relative;
 		padding-left: 2.5rem;
@@ -1457,7 +1505,7 @@ label{
 }
 .bread-cover{
 	display: flex;
-	font-size: 1.1em;
+	font-size: 1.3em;
 	font-weight: 300;
 	cursor: default;
 	margin-bottom: 1.8rem;
@@ -2333,7 +2381,7 @@ ul.ul-lists-goods{
 		width: 26%;
 	}
 	.acticule{
-		font-size: 1.1em;
+		font-size: 1.3em;
 		color: #828282;
 		font-weight: 400;
 		margin-bottom: 1.3rem;
@@ -2356,7 +2404,7 @@ ul.ul-lists-goods{
 	.count-wr{
 		width: 25.5%;
 		.count{
-			font-size: 1.1em;
+			font-size: 1.3em;
 			color: @color-read;
 			margin-bottom: 2rem;
 		}
@@ -2565,6 +2613,9 @@ ul.ul-lists-goods{
 	z-index: 99;
 	text-align: center;
 	display: none;
+	&.show{
+		display: block !important;;
+	}
 	&:before {
 		content: "";
 		display: inline-block;
@@ -2610,9 +2661,36 @@ ul.ul-lists-goods{
 
 
 
+.news-detail{
+	font-size: 1.6em;
+	h3, .h3{
+		font-size: 2rem;
+		font-weight: 700;
+		margin-bottom: 1.3rem;
+	}
+}
 
-
-
+.page_wrapper_new{
+	p{
+		font-size: 1.4em;
+		margin-bottom: 1.5rem;
+		line-height: 1.4em;
+	}
+	ul{
+		font-size: 1.4em;
+		margin-bottom: 1.5rem;
+		line-height: 1.4em;
+		margin-left: 10px;
+		li{
+			list-style: disc;
+		}
+	}
+	h4, .h4{
+		font-size: 2rem;
+		font-weight: 700;
+		margin-bottom: 1.3rem;
+	}
+}
 
 
 
